@@ -1,10 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>devbreeze</title>
-    </head>
-    <body>
-        <h1>devbreeze</h1>
-    </body>
-</html>
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/fixes.html" as fixes %}
+
+{% block title %}devbreeze{% endblock %}
+
+{% block head %}
+{{super()}}
+{{fixes.ie8()}}
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <h1>devbreeze</h1>
+</div>
+{% endblock %}

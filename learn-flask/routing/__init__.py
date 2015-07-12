@@ -9,11 +9,11 @@ def index():
 
 @app.route('/hello')
 def hello():
-    return 'Hello World!'
+    return 'Hello, World!'
 
 @app.route('/greet/<name>')
 def greet(name):
-    return 'Hello %s!' % name
+    return 'Hello, %s!' % name
 
 @app.route('/factorial/<int:x>')
 def factorial(x):
@@ -21,10 +21,10 @@ def factorial(x):
 
 @app.route('/message')
 def message():
-    return render_template('message.html', title='Lorem ipsum', text=('Lorem ipsum dolor sit amet, '
-                                                                      'consectetur adipiscing elit, '
-                                                                      'sed do eiusmod tempor incididunt '
-                                                                      'ut labore et dolore magna aliqua.'))
+    return render_template('message.html', text=('Lorem ipsum dolor sit amet, '
+                                                 'consectetur adipiscing elit, '
+                                                 'sed do eiusmod tempor incididunt '
+                                                 'ut labore et dolore magna aliqua.'))
 
 @app.route('/vote', methods=['POST'])
 def vote():
