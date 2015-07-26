@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block title %}Fields{% endblock %}
+{% block body %}
+<h1>Fields</h1>
+<form method="POST" action="/hellofields">
+    {{ form.csrf_token }}
+    <dl>
+        <dt>{{ form.boolean_field.label }}</dt>
+        <dd>{{ form.boolean_field }}</dd>
+        <dt>{{ form.select_field.label }}</dt>
+        <dd>{{ form.select_field }}</dd>
+        <dt>{{ form.string_field.label }}</dt>
+        <dd>{{ form.string_field }}</dd>
+        <dt>{{ form.text_area_field.label }}</dt>
+        <dd>{{ form.text_area_field }}</dd>
+    </dl>
+    {{ form.submit_field }}
+</form>
+{% endblock %}
